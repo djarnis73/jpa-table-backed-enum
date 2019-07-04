@@ -1,7 +1,7 @@
-##Tags
+## Tags
 java, jpa, hibernate, spring-boot
 
-##Background
+## Background
 
 I was working on a project where we were inserting lots of records in a database and I was looking for a way to persist [enums](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html) efficiently.
 
@@ -22,4 +22,4 @@ However [Hibernate documentation](https://docs.jboss.org/hibernate/orm/5.4/userg
 
 So after some experimentation I managed to define an enum as an entity.
 
-One of the key points is the EnumAsEntityInterceptor, which deals with instantiation, since an enum does not have a constructor
+One of the key points is the EnumAsEntityInterceptor, which deals with instantiation, since an enum does not have a constructor.

@@ -18,3 +18,8 @@ The JPA Spec ([JSR 338, section 2.1](https://download.oracle.com/otn-pub/jcp/per
 >The entity class must not be final. No methods or persistent instance variables of the entity class may be final.
 
 However [Hibernate documentation](https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#entity-pojo) states that
+> Hibernate, however, is not as strict in its requirements
+
+So after some experimentation I managed to define an enum as an entity.
+
+One of the key points is the EnumAsEntityInterceptor, which deals with instantiation, since an enum does not have a constructor

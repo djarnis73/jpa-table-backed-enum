@@ -1,0 +1,27 @@
+#spring.jpa.open-in-view: false #silence warning on spring startup
+#spring.jpa.properties.hibernate.session_factory.interceptor: dk.danskespil.safe.model.EnumAsEntityInterceptor
+
+spring:
+  jpa:
+    open-in-view: false #silence warning on spring startup
+    properties:
+      hibernate:
+        session_factory:
+          interceptor: example.EnumAsEntityInterceptor # enable hibernate interceptor that allows us to use java enums as entities
+  jta:
+    enabled: true
+logging:
+  level:
+    org:
+      springframework:
+        transaction:
+          interceptor: INFO
+      hibernate:
+        # lets us see the sql statements executed by hibernate
+        SQL: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
